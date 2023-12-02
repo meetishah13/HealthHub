@@ -14,7 +14,7 @@
     <style name="Theme.HealthHub" parent="Base.Theme.HealthHub" />
     <style name="Theme.HealthHub.SplashScreen" parent="Theme.HealthHub" >
         <item name="windowSplashScreenBackground">@color/pink</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/icon</item>
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/icon</item>-->
         <item name="postSplashScreenTheme">@style/Base.Theme.HealthHub</item>
 
     </style>
