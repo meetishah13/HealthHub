@@ -48,8 +48,13 @@ dependencies {
 
     //Adding other dependencies
     //Firebase dependencies
-    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("io.coil-kt:coil:2.3.0")
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.firebase:firebase-analytics")
+
     //Splash Screen Dependency
     implementation("androidx.core:core-splashscreen:1.0.0")
     //Card view dependency

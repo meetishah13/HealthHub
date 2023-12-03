@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.HealthHub"
         tools:targetApi="31">
+
+        <!-- Splash Screen Activity -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
@@ -21,13 +23,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login Activity -->
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Base.Theme.HealthHub.MainActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value=""/>
+            android:name=".LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+        <!-- Main Activity -->
+        <activity
+        android:name=".MainActivity"
+        android:exported="true" android:theme="@style/Base.Theme.HealthHub.NoActionBar"> <!-- Specify exported attribute here -->
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
     </application>
 
 </manifest>
