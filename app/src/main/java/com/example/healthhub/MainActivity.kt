@@ -30,26 +30,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
 
-        if(savedInstanceState == null){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,HomeFragment()).commit()
-//            navigationView.setCheckedItem(R.id.nav_home)
-        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.nav_home ->supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,HomeFragment()).commit()
-            R.id.nav_scheduleAppointment ->supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,SchedulerFragment()).commit()
-            R.id.nav_waterReminder ->supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,WaterReminderFragment()).commit()
-            R.id.nav_workout ->supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,WorkoutFragment()).commit()
-            R.id.nav_article ->supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,HealthArticleTipsFragment()).commit()
-            R.id.nav_logout ->Toast.makeText(this,"Logout",Toast.LENGTH_SHORT).show()
+//            R.id.nav_home ->supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container,HomeFragment()).commit()
+//            R.id.nav_scheduleAppointment ->supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container,SchedulerFragment()).commit()
+//            R.id.nav_waterReminder ->supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container,WaterReminderFragment()).commit()
+//            R.id.nav_workout ->supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container,WorkoutFragment()).commit()
+//            R.id.nav_article ->supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container,HealthArticleTipsFragment()).commit()
+//            R.id.nav_logout ->Toast.makeText(this,"Logout",Toast.LENGTH_SHORT).show()
 
         }
         drawerLayout.closeDrawer(GravityCompat.START)
