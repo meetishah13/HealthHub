@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-           >
+            android:theme="@style/Base.Theme.HealthHub.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value=""/>
