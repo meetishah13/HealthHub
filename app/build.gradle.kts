@@ -52,4 +52,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     //Splash Screen Dependency
     implementation("androidx.core:core-splashscreen:1.0.0")
+    //Card view dependency
+    implementation("androidx.cardview:cardview:1.0.0")
 }
