@@ -12,37 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.HealthHub"
         tools:targetApi="31">
-
-        <!-- Splash Screen Activity -->
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthTipsAndArticlesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WaterIntakeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScheduleAppointmentActivity"
+            android:exported="false" /> <!-- Splash Screen Activity -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.HealthHub.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Login Activity -->
+        </activity> <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-        <!-- Main Activity -->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity> <!-- Main Activity -->
         <activity
-        android:name=".MainActivity"
-        android:exported="true" android:theme="@style/Base.Theme.HealthHub.NoActionBar"> <!-- Specify exported attribute here -->
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-    </activity>
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.HealthHub.NoActionBar"> <!-- Specify exported attribute here -->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

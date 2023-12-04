@@ -57,6 +57,14 @@ dependencies {
 
     //Splash Screen Dependency
     implementation("androidx.core:core-splashscreen:1.0.0")
+    //Firebase dependency
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("io.coil-kt:coil:2.3.0")
+    testImplementation("junit:junit:4.13.2")
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation("com.google.firebase:firebase-analytics")
     //Card view dependency
     implementation("androidx.cardview:cardview:1.0.0")
 }
