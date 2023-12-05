@@ -9,5 +9,9 @@
     <string name="water_fragment">Hello Water fragment</string>
     <string name="health_tips_fragment">Hello Health Tips fragment</string>
     <string name="workout_fragment">Hello Workout fragment</string>
+    <string name="scheduleAppointment">Schedule Appointment</string>
+    <string name="waterReminder">Water Intake</string>
+    <string name="healthTips">Health Tips and Articles</string>
+    <string name="workout">Workout</string>
 
 </resources>
