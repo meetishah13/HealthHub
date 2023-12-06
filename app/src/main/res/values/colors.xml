@@ -6,6 +6,10 @@
     <color name="green">#34D2AF</color>
     <color name="orange">#FFB440</color>
     <color name="pink">#E91E63</color>
+    <color name="colorSecondaryDark">#4167B2</color>
+    <color name="colorSecondaryLight">#6A91DE</color>
+    <color name="colorSecondaryLighter">#ABBDEC</color>
+    <color name="colorSecondary">#1845E6</color>
     <!--   Color for the app bar and other primary UI elements. -->
     <color name="colorPrimary">#3F51B5</color>
 
@@ -15,4 +19,8 @@
 
     <!--   a secondary color for controls like checkboxes and text fields. -->
     <color name="colorAccent">#FF4081</color>
+    <color name="colorSkyBlue">#A0A5F4</color>
+    <color name="grey">#A5A3A3</color>
+    <color name="red">#D80101</color>
+    <color name="dividerColor">#F5F5F5</color>
 </resources>

@@ -35,6 +35,15 @@
             </intent-filter>
         </activity> <!-- Login Activity -->
         <activity
+            android:name=".WalkThroughActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
 <!--            <intent-filter>-->

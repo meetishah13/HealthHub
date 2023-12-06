@@ -67,4 +67,13 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     //Card view dependency
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.github.cjhandroid:WaveProgressBar:v1.0.0")
+    implementation("me.itangqi.waveloadingview:library:0.3.5")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("com.daimajia.easing:library:2.0@aar")
+    implementation("com.daimajia.androidanimations:library:2.3@aar")
+    implementation("com.params.progressview:step-progress:1.0.2")
+    implementation("com.github.patgdut:RadioRealButton:v2.1.2")
+    implementation("com.tbuonomo.andrui:viewpagerdotsindicator:2.1.2")
+
 }
