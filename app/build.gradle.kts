@@ -67,4 +67,10 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     //Card view dependency
     implementation("androidx.cardview:cardview:1.0.0")
+    //Picasso Library
+    implementation ("com.squareup.picasso:picasso:2.8")
+    //Retrofit Library
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //GSONConverter
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }

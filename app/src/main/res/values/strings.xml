@@ -13,5 +13,5 @@
     <string name="waterReminder">Water Intake</string>
     <string name="healthTips">Health Tips and Articles</string>
     <string name="workout">Workout</string>
-
+    <string name="api_key">bf0f90475f9b4a3bb11f5db6f636fdbb</string>
 </resources>
