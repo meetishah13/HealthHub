@@ -48,7 +48,7 @@ dependencies {
 
     //Adding other dependencies
     //Firebase dependencies
-    implementation("com.google.code.gson:gson:2.10.1")
+//    implementation("com.googlson:gson:2.10.1")
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-auth")
     implementation("io.coil-kt:coil:2.3.0")
@@ -63,8 +63,21 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("io.coil-kt:coil:2.3.0")
     testImplementation("junit:junit:4.13.2")
+    implementation("com.github.patgdut:RadioRealButton:v2.1.2")
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.params.progressview:step-progress:1.0.2")
+    implementation("com.daimajia.easing:library:2.0@aar")
+    implementation("com.daimajia.androidanimations:library:2.3@aar")
+    implementation("com.tbuonomo.andrui:viewpagerdotsindicator:2.1.2")
+    implementation("me.itangqi.waveloadingview:library:0.3.5")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    //Picasso Library
+    implementation ("com.squareup.picasso:picasso:2.8")
+    //Retrofit Library
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
     //Card view dependency
     implementation("androidx.cardview:cardview:1.0.0")
+//    GSONConverter
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
