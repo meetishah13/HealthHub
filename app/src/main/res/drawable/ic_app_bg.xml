@@ -7,14 +7,14 @@
         <clip-path android:pathData="M0,0h360v640h-360z M 0,0"/>
         <path
                 android:pathData="M0,0h360v640h-360z"
-                android:fillColor="#D7DCF2"/>
+                android:fillColor="#FDE1EC"/>
 
 
         <path
                 android:pathData="M-365,-196a378.5,523 0,1 0,757 0a378.5,523 0,1 0,-757 0z"
-                android:fillColor="#1632E6"/>
+                android:fillColor="#F866AA"/>
         <path
                 android:pathData="M238,211a154,211 0,1 0,308 0a154,211 0,1 0,-308 0z"
-                android:fillColor="#383BFA"/>
+                android:fillColor="#FD9BC3"/>
     </group>
 </vector>

@@ -22,6 +22,7 @@ import android.os.Handler
 import android.text.TextUtils
 import android.util.TypedValue
 import android.view.LayoutInflater
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -105,11 +106,16 @@ class WaterIntakeActivity : AppCompatActivity() {
 //                sharedPref.getInt(AppUtils.NOTIFICATION_FREQUENCY_KEY, 30).toLong()
 //            )
 //        }
+        val btnBack = findViewById<ImageButton>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         if (notificStatus) {
-            btnNotific.setImageDrawable(getDrawable(R.drawable.ic_bell))
+
+            btnNotific.setImageResource(R.drawable.ic_bell)
         } else {
-            btnNotific.setImageDrawable(getDrawable(R.drawable.ic_bell_disabled))
+            btnNotific.setImageResource(R.drawable.ic_bell_disabled)
         }
 
         sqliteHelper.addAll(dateNow, 0, totalIntake)
@@ -123,6 +129,7 @@ class WaterIntakeActivity : AppCompatActivity() {
 
 
         val fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd)
+        fabAdd.setImageResource(R.drawable.ic_plus_solid)
         fabAdd.setOnClickListener{
             if (selectedOption != null) {
                 if ((inTook * 100 / totalIntake) <= 140) {

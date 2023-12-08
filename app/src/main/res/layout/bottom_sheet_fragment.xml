@@ -128,8 +128,8 @@
                 android:focusable="false"
                 android:hint="@string/sleeping_hint"
                 android:inputType="numberSigned"
-                android:paddingStart="10dp"
-                android:paddingBottom="10dp" />
+                android:paddingStart="50dp"
+                android:paddingBottom="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
