@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Camera
 import android.graphics.Color
@@ -15,6 +16,7 @@ import android.hardware.camera2.CameraDevice
 import android.hardware.camera2.CameraManager
 import android.hardware.camera2.CaptureRequest
 import android.media.ImageReader
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -145,6 +147,16 @@ class ScheduleAppointmentActivity : AppCompatActivity() {
             // Show the TimePickerDialog
             timePickerDialog.show()
         }
+//        findViewById<Button>(R.id.additionalBtn1).apply {
+//            setOnClickListener {
+//                capReq = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE)
+//                capReq.addTarget(imageReadable.surface)
+//                cameraCaptureSession.capture(capReq.build(), null, null)
+//
+//                // After capturing the image, send an email
+//                sendEmail()
+//            }
+//        }
 
     }
 
@@ -205,6 +217,35 @@ class ScheduleAppointmentActivity : AppCompatActivity() {
             if(it!=PackageManager.PERMISSION_GRANTED){
                 get_permissions()
             }
+        }
+    }
+    private fun sendEmail() {
+        val emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.type = "text/plain"
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("meetishah13@gmail.com")) // Replace with the recipient's email
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Appointment Scheduled")
+        emailIntent.putExtra(
+            Intent.EXTRA_TEXT,
+            "Appointment Details:\n" +
+                    "Date: ${findViewById<TextView>(R.id.dateInput).text}\n" +
+                    "Time: ${findViewById<TextView>(R.id.timeInput).text}\n" +
+                    "Doctor: ${findViewById<TextView>(R.id.doctorNameInput).text}\n"
+        )
+
+        // Attach the captured image to the email
+//        val file = File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "img.jpeg")
+//        val uri = Uri.fromFile(file)
+//        emailIntent.putExtra(Intent.EXTRA_STREAM, uri)
+//        emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."))
+        } catch (ex: android.content.ActivityNotFoundException) {
+            Toast.makeText(
+                this@ScheduleAppointmentActivity,
+                "There are no email clients installed.",
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }

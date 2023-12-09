@@ -7,7 +7,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_app_bg"
     tools:context=".MainActivity">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+        </LinearLayout>
+    </ScrollView>
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="40dp"
@@ -30,28 +38,6 @@
         android:src="@drawable/ic_settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/btnNotific"-->
-<!--            android:layout_width="wrap_content"-->
-<!--          android:layout_height="wrap_content"-->
-<!--        tools:ignore="MissingConstraints"-->
-<!--        android:src="@drawable/ic_bell"/>-->
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/btnNotific"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        android:padding="8dp"-->
-<!--        android:src="@drawable/ic_bell"-->
-<!--        app:fabSize="mini"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/fabAdd"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/cardView" />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnNotific"
@@ -77,7 +63,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
-        android:src="@drawable/baseline_addchart_24"
+        android:src="@drawable/ic_stats"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        android:src="@drawable/baseline_add_24" />
+        android:src="@drawable/ic_plus_solid" />
 
     <TextView
         android:id="@+id/textView5"

@@ -9,6 +9,9 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,12 +29,11 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorSecondaryLighter">
 
-                <!-- TODO: Update blank fragment layout -->
                 <TextView
                     android:id="@+id/userText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="Hello User!"
                     android:textColor="@color/pink"
                     android:textSize="30sp"
@@ -56,8 +58,8 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:id="@+id/appointmentSchedule"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_row="0"
                         android:layout_rowWeight="1"
                         android:layout_column="0"
@@ -93,8 +95,8 @@
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/waterIntake"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_row="0"
                         android:layout_rowWeight="1"
                         android:layout_column="1"
@@ -130,8 +132,8 @@
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/workout"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_row="1"
                         android:layout_rowWeight="1"
                         android:layout_column="0"
@@ -167,8 +169,8 @@
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/healthTips"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_row="1"
                         android:layout_rowWeight="1"
                         android:layout_column="1"
@@ -204,8 +206,8 @@
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                     android:id="@+id/locateUs"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_row="2"
                     android:layout_rowWeight="1"
                     android:layout_column="0"
@@ -242,6 +244,7 @@
                 </GridLayout>
             </RelativeLayout>
         </LinearLayout>
+    </ScrollView>
     <com.google.android.material.navigation.NavigationView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

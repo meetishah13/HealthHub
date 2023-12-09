@@ -72,22 +72,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         findViewById<CardView>(R.id.appointmentSchedule).setOnClickListener {
             intent = Intent(this, ScheduleAppointmentActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         findViewById<CardView>(R.id.waterIntake).setOnClickListener {
             intent = Intent(this, WaterIntakeActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+
         }
         findViewById<CardView>(R.id.workout).setOnClickListener {
             intent = Intent(this, WorkoutActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.scale_down, R.anim.scale_up)
+
         }
         findViewById<CardView>(R.id.healthTips).setOnClickListener {
             intent = Intent(this, HealthTipsAndArticlesActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom)
+
         }
         findViewById<CardView>(R.id.locateUs).setOnClickListener {
             intent = Intent(this, LocateUsActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+
         }
     }
     private fun extractUsername(email: String?): String {

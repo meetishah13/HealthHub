@@ -1,17 +1,5 @@
 package com.example.healthhub
 
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import cjh.WaveProgressBarlibrary.WaveProgressBar;
-//import com.github.mikephil.charting.animation.Easing
-//
-//
-//class WaterIntakeActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_water_intake)
-//    }
-//}
 
 
 import android.app.NotificationManager
@@ -20,7 +8,9 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
+import android.transition.Slide
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -41,7 +31,6 @@ import com.example.healthhub.utils.AppUtils
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import params.com.stepprogressview.StepProgressView
 
-//import kotlinx.android.synthetic.main.activity_main.*
 
 
 class WaterIntakeActivity : AppCompatActivity() {
@@ -56,11 +45,13 @@ class WaterIntakeActivity : AppCompatActivity() {
     private var snackbar: Snackbar? = null
     private var doubleBackToExitPressedOnce = false
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_water_intake)
-
+        window.enterTransition = Slide().apply {
+            duration = 300 // Set the duration of the transition in milliseconds
+            slideEdge = Gravity.BOTTOM // Set the edge from which the view should slide in
+        }
         sharedPref = getSharedPreferences(AppUtils.USERS_SHARED_PREF, AppUtils.PRIVATE_MODE)
         sqliteHelper = SqliteHelper(this)
 
