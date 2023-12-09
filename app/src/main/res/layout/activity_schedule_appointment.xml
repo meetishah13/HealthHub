@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScheduleAppointmentActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/Capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture"
+        android:textColor="@color/black"
+        android:layout_below="@id/textureView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/pickDateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date for Appointment"
+        android:textColor="@color/black"
+        android:layout_below="@id/Capture"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pickDateBtn"
+        android:hint="Enter Date"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor Name"
+        android:textColor="@color/black"
+        android:layout_below="@id/dateInput"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/doctorNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Doctor's Name"
+        android:minHeight="48dp"
+        android:layout_below="@id/doctorName"/>
+
+    <Button
+        android:id="@+id/doctortime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule Time"
+        android:textColor="@color/black"
+        android:layout_below="@id/doctorNameInput"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/timeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctortime"
+        android:hint="Enter Time"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/additionalBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason"
+        android:textColor="@color/black"
+        android:layout_below="@id/timeInput"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctorName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="225dp"
+        android:hint="Enter Reason "
+        android:textColor="@color/black"
+        android:minHeight="48dp" />
+
+
+</RelativeLayout>
+
