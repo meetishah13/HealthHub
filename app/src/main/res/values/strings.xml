@@ -2,6 +2,7 @@
     <string name="app_name">Health Hub</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
+    <string name="title_activity_locate_us">Locate Us</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment">Hello Home fragment</string>
@@ -41,6 +42,7 @@
     </string>
 
     <string name="api_key">bf0f90475f9b4a3bb11f5db6f636fdbb</string>
+    <string name="locateUs">Locate Us</string>
 
 
 </resources>

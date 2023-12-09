@@ -26,7 +26,6 @@ import android.view.TextureView
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.healthhub.fragments.TimePickerFragment
 import org.w3c.dom.Text
 import java.io.File
 import java.io.FileOutputStream
@@ -121,13 +120,7 @@ class ScheduleAppointmentActivity : AppCompatActivity() {
             },year,month,day)
             dpd.show()
         }
-//        findViewById<Button>(R.id.doctortime).setOnClickListener{
-//
-////            val fm = supportFragmentManager
-////            val timePickerDialogFragment = TimePickerFragment()
-////            timePickerDialogFragment.show(fm, "time_picker")
-//
-//        }
+
         val timePickerButton: Button = findViewById(R.id.doctortime)
         val outputTxt: TextView = findViewById(R.id.timeInput)
 
@@ -154,14 +147,7 @@ class ScheduleAppointmentActivity : AppCompatActivity() {
         }
 
     }
-    fun setSelectedTime(hourOfDay: Int, minute: Int) {
-        val selectedTime: String = "Your Selected Time $hourOfDay : $minute"
-        var output_txt: TextView = findViewById<TextView>(R.id.timeInput)
-        output_txt.setTextColor(Color.BLUE)
-        output_txt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
-        output_txt.typeface = Typeface.MONOSPACE
-        output_txt.text = selectedTime
-    }
+
     fun get_permissions(){
 
         var permissionsLst= mutableListOf<String>()

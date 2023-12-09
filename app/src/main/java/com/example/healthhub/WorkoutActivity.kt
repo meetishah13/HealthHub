@@ -25,5 +25,4 @@ class WorkoutActivity : AppCompatActivity() {
 
 
     }
-
 }

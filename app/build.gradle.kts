@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -33,6 +34,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -80,8 +84,15 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
 //    GSONConverter
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+
+    implementation ("com.google.android.gms:play-services-auth:20.5.0")
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1")
+
 
 
 }

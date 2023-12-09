@@ -85,6 +85,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             intent = Intent(this, HealthTipsAndArticlesActivity::class.java)
             startActivity(intent)
         }
+        findViewById<CardView>(R.id.locateUs).setOnClickListener {
+            intent = Intent(this, LocateUsActivity::class.java)
+            startActivity(intent)
+        }
     }
     private fun extractUsername(email: String?): String {
         if (email != null) {
@@ -119,6 +123,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_article ->{
                 intent = Intent(this, HealthTipsAndArticlesActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_locate_us ->{
+                intent = Intent(this, LocateUsActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_logout ->{
