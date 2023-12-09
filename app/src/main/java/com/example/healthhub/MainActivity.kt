@@ -15,8 +15,10 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.Firebase
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import com.google.firebase.database.FirebaseDatabase
 import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +28,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        FirebaseApp.initializeApp(this);
+        data class Message(
+            var sender: String? = null,
+            var text: String? = null
+        )
+        // Step 3: Write data to the Realtime Database
+        val databaseReference = FirebaseDatabase.getInstance().getReference("messages")
+        // Create an instance of the Message class
+        val message = Message(sender = "John", text = "Hello, Firebase!")
+
+        // Push data to a new child node with a unique key
+        val newMessageReference = databaseReference.push()
+        newMessageReference.setValue(message)
+
+        // Alternatively, if you have a specific key you want to use, you can set the value directly
+        val specificMessageReference = databaseReference.child("yourSpecificKey")
+        specificMessageReference.setValue(message)
 
         drawerLayout = findViewById(R.id.drawer_layout)
 
