@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.HealthHub"
         tools:targetApi="31">
+        <activity
+            android:name=".DetailsFragment"
+            android:exported="false" />
         <activity
             android:name=".WorkoutActivity"
             android:exported="false" />
@@ -35,23 +40,35 @@
             </intent-filter>
         </activity> <!-- Login Activity -->
         <activity
+            android:name=".WalkThroughActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity> <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.HealthHub.NoActionBar"> <!-- Specify exported attribute here -->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--            </intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 

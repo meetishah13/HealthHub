@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="6dp"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:layout_weight="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_title"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:maxLines="3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_source"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/pink"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/img_headline"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_newspaper_24"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
